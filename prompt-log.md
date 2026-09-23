@@ -47,4 +47,17 @@
 2. เพิ่มตาราง traceability ให้ครอบคลุม FR, AC, Constraints และ NFR ทุกข้อใน `spec.md`
 3. ทำเครื่องหมาย TASK-BKG-11 เรื่องการออกหมายเลขคิวเป็น `Blocked: รอ Q-02` และไม่เดารูปแบบหมายเลขคิว
 
+---
+## 2569-09-23 คำสั่ง: /implement TASK-BKG-01 specs/001-booking/tasks.md
+
+- เครื่องมือ: Copilot in Codespaces
+- ไฟล์ที่สร้าง: `backend/app/db/models.py`, `backend/app/db/migrations/001_init.py`, `backend/tests/test_TASK_BKG_01.py`
+- ไฟล์ที่แก้: `specs/001-booking/tasks.md`, `prompt-log.md` ตามขั้นตอนปิด task
+
+### ผลลัพธ์สรุป
+1. สร้าง schema สำหรับ `slots`, `bookings` และ `audit_logs` โดย `bookings` เก็บ HN และไม่มี `national_id`
+2. เพิ่ม migration `upgrade(engine)` และ test ตรวจตารางและคอลัมน์ตาม CON-TECH-01, IF-HIS-01 และ DOM-PDPA-01
+3. ผล test: `pytest tests/test_TASK_BKG_01.py -q` ผ่าน `1 passed`
+4. ไม่พบสิ่งที่ต้องเดา; ไม่ได้กำหนดวิธีออกหมายเลขคิวซึ่งยังติด Q-02
+
 
