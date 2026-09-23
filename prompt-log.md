@@ -60,4 +60,25 @@
 3. ผล test: `pytest tests/test_TASK_BKG_01.py -q` ผ่าน `1 passed`
 4. ไม่พบสิ่งที่ต้องเดา; ไม่ได้กำหนดวิธีออกหมายเลขคิวซึ่งยังติด Q-02
 
+---
+## 2569-09-23 คำสั่ง: /implement TASK-BKG-04 specs/001-booking/tasks.md
+
+- เครื่องมือ: Copilot in Codespaces
+- ไฟล์ที่สร้าง: `frontend/src/pages/SlotPicker.jsx`, `frontend/src/__tests__/TASK-BKG-04.test.jsx`
+- ไฟล์ที่แก้: `specs/001-booking/tasks.md` และ `prompt-log.md` ตามขั้นตอนปิด task
+
+### ผลลัพธ์สรุป
+1. สร้างหน้าจอเลือกแพ็กเกจ วันที่ และช่วงเวลาที่ว่าง พร้อมจำนวนที่นั่งคงเหลือ
+2. ใช้ API จำลองผ่าน `loadSlots` และโหลดข้อมูลใหม่เมื่อเปลี่ยนแพ็กเกจ ตาม FR-BKG-01 และ FR-BKG-06
+3. ผล test: `npm test -- --run src/__tests__/TASK-BKG-04.test.jsx` ผ่าน `1 test passed`
+4. ไม่พบสิ่งที่ต้องเดา; ไม่แตะ API จริงหรือ task อื่น
+
+---
+## 2569-09-23 แก้ follow-up TASK-BKG-04: เชื่อมหน้าจอเข้ากับ App
+
+- ไฟล์ที่แก้: `frontend/src/App.jsx`, `specs/001-booking/tasks.md`
+- เหตุผล: `SlotPicker` ถูกสร้างไว้แล้วแต่ `App.jsx` ยังแสดง starter page จึงไม่เห็นช่องเลือกแพ็กเกจและวันเมื่อเปิดแอป
+- ผลตรวจ: test `TASK-BKG-04` และ `setup.test.jsx` ผ่านรวม 2 tests; มี React `act` warning ใน test โครงเดิม แต่ไม่มี test failure
+- เพิ่ม `App.jsx` ในช่องไฟล์ที่แตะของ TASK-BKG-04 ให้ตรงกับการแก้จริง
+
 
