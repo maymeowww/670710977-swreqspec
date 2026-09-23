@@ -36,4 +36,15 @@
 2. สำหรับ Constraint ทั้งหมด (CON-TECH-01, DOM-PDPA-01, IF-IDP-01, IF-HIS-01, IF-NOT-01) ระบุว่า "ใช้แล้ว" ในตารางตรวจ Constraints
 3. Open Question เดียวที่ยังเหลือ: Q-02 (หมายเลขคิวรีเซ็ตรายวันหรือไม่) — ต้องถามเจ้าหน้าที่เวชระเบียน
 
+---
+## 2569-09-23 คำสั่ง: /tasks (specs/001-booking/spec.md)
+
+- เครื่องมือ: Copilot in Codespaces
+- ไฟล์: specs/001-booking/tasks.md (สร้างใหม่)
+
+### ผลลัพธ์สรุป
+1. แตกงานเป็น TASK-BKG-01 ถึง TASK-BKG-17 ตามลำดับจาก `plan.md` โดยยังไม่เขียนโค้ด
+2. เพิ่มตาราง traceability ให้ครอบคลุม FR, AC, Constraints และ NFR ทุกข้อใน `spec.md`
+3. ทำเครื่องหมาย TASK-BKG-11 เรื่องการออกหมายเลขคิวเป็น `Blocked: รอ Q-02` และไม่เดารูปแบบหมายเลขคิว
+
 
