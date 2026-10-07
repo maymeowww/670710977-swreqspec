@@ -54,3 +54,23 @@
 - สถานะแถวใน test-cases.md: ไม่มีแถวที่ "ใช้ได้" จึงหยุดที่โหมดร่าง
 - ผล: เพิ่มแถว 3 รายการใน specs/001-booking/test-cases.md สถานะ "ร่าง" ตามรูปแบบทางปกติ / ขอบ / ทางผิด
 - หมายเหตุ: เนื่องจากยังไม่มีแถวสถานะ "ใช้ได้" จึงไม่เขียนโค้ด test และไม่รัน pytest หรือ vitest
+
+---
+
+## 2569-10-07 00.40 คำสั่ง: /testcases AC-BKG-01 specs/001-booking/
+
+- โหมด: เขียน test
+- AC ที่ประมวลผล: AC-BKG-01
+- ตรวจแถวที่ "ใช้ได้": TC-BKG-01-1, TC-BKG-01-2, TC-BKG-01-3
+- ผล test: เพิ่ม test 3 ตัวลง backend/tests/test_AC_BKG_01.py ตามชื่อในตาราง
+- รัน: cd backend && pytest -v tests/test_AC_BKG_01.py
+
+---
+
+## 2569-10-07 08:45 คำสั่ง: /verify specs/001-booking/
+
+- โหมด: ตรวจ requirement
+- ผล test: backend 7 passed, 0 failed; frontend 1 passed, 0 failed
+- จำนวนแถวตามสถานะ: ครบ 3, ยังไม่ถึง 9, รอ 0, ช่องโหว่ 3
+- ข้อค้นพบใหม่: F-001, F-002, F-003, F-004, F-005, F-006
+- ไฟล์ที่แก้ไข: specs/001-booking/rtm.md
